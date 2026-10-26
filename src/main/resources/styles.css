@@ -1,0 +1,427 @@
+/* Base */
+.root {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-background-color: #FFFFFF;
+}
+
+/* =========================================
+   SIDEBAR (#192637) - CORRIGIDA E FLUIDA
+   ========================================= */
+.sidemenu {
+    -fx-background-color: #192637;
+    -fx-pref-width: 260px;
+    -fx-min-width: 260px;
+    -fx-max-width: 260px;
+    -fx-padding: 24px 0 0 0;
+    -fx-spacing: 0;
+}
+
+.logo-container {
+    -fx-padding: 0 0 32px 24px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Botões do Menu Lateral que ocupam 100% da largura sem esmagar */
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0052E0;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 17px;
+    -fx-font-weight: 500;
+    -fx-pref-height: 54px;
+    -fx-min-height: 54px;
+    -fx-max-width: infinity; /* Ocupa toda a barra lateral */
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 20px 0 24px;
+    -fx-graphic-text-gap: 16px;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+}
+
+.menu-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: #3b82f6;
+}
+
+/* Destaque suave que cobre toda a linha do item ativo */
+.menu-btn-active {
+    -fx-background-color: rgba(0, 82, 224, 0.18);
+    -fx-border-color: transparent transparent transparent #0052E0;
+    -fx-border-width: 0 0 0 4px; /* Barra azul sutil na esquerda */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 600;
+}
+
+/* =========================================
+   NAVBAR SUPERIOR (Flexível para qualquer resolução)
+   ========================================= */
+.navbar {
+    -fx-background-color: #F7F7F7;
+    -fx-pref-height: 85px;
+    -fx-min-height: 80px;
+    -fx-padding: 16px 24px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 14px;
+    -fx-border-color: transparent transparent #E5E7EB transparent;
+    -fx-border-width: 1px;
+}
+
+/* Campo de busca elástico (acompanha a largura da tela) */
+.search-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 46px;
+    -fx-min-height: 44px;
+    -fx-padding: 0 16px;
+    -fx-font-size: 15px;
+    -fx-text-fill: #192637;
+    -fx-prompt-text-fill: #B3B3B3;
+}
+
+.search-field:focused {
+    -fx-border-color: #0052E0;
+}
+
+/* Botões da Barra Superior */
+.btn-novo-cliente {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 46px;
+    -fx-min-height: 44px;
+    -fx-text-fill: #424242;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 16px;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+
+.btn-novo-cliente:hover {
+    -fx-background-color: #EFEFEF;
+}
+
+.btn-registrar-servico {
+    -fx-background-color: #0052E0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 46px;
+    -fx-min-height: 44px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 18px;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+}
+
+.btn-registrar-servico:hover {
+    -fx-background-color: #0044B9;
+}
+
+.btn-atualizar-nav {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 46px;
+    -fx-min-height: 44px;
+    -fx-padding: 0 14px;
+    -fx-text-fill: #424242;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+}
+
+.btn-atualizar-nav:hover {
+    -fx-background-color: #EFEFEF;
+}
+
+/* =========================================
+   TABELA FLUIDA E MODERNA
+   ========================================= */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 16px 24px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F7F7F7;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 42px;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #424242;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: transparent transparent #F1F5F9 transparent;
+    -fx-cell-size: 44px;
+    -fx-font-size: 13px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FAFAFA;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #EFF6FF;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #DBEAFE;
+    -fx-text-fill: #192637;
+}
+
+/* Botões de Ação dentro das Linhas da Tabela */
+.btn-grid-edit {
+    -fx-background-color: #E2E8F0;
+    -fx-text-fill: #192637;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-grid-edit:hover {
+    -fx-background-color: #CBD5E1;
+}
+
+.btn-grid-delete {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: #DC2626;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-grid-delete:hover {
+    -fx-background-color: #FCA5A5;
+}
+
+/* Botão Visualizar na Tabela */
+.btn-grid-view {
+    -fx-background-color: rgba(0, 82, 224, 0.10);
+    -fx-border-color: #0052E0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #0052E0;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 14px;
+    -fx-cursor: hand;
+    -fx-graphic-text-gap: 6px;
+}
+
+.btn-grid-view:hover {
+    -fx-background-color: #0052E0;
+    -fx-text-fill: #FFFFFF;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: transparent;
+}
+
+/* =========================================
+   MODAL (CLIENTE, FORNECEDOR E SERVIÇO)
+   ========================================= */
+.modal-frame {
+    -fx-background-color: #F7F7F7;
+    -fx-border-color: #192637;
+    -fx-border-width: 1px;
+}
+
+/* Cabeçalho (#192637, Altura 58px) */
+.modal-top-bar {
+    -fx-background-color: #192637;
+    -fx-pref-height: 58px;
+    -fx-min-height: 58px;
+    -fx-alignment: CENTER;
+}
+
+.modal-top-title {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #F1F5F9;
+}
+
+/* Labels do Formulário */
+.modal-label {
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #424242;
+}
+
+/* Inputs brancos com borda cinza (Padrão) */
+.modal-input {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+    -fx-padding: 0 12px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #192637;
+}
+
+.modal-input:focused {
+    -fx-border-color: #0052E0;
+}
+
+/* ComboBoxes (Selects de UF, Tipo, Cliente) */
+.modal-combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-pref-height: 40px;
+    -fx-min-height: 40px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #192637;
+    -fx-cursor: hand;
+}
+
+.modal-combo-box:focused {
+    -fx-border-color: #0052E0;
+}
+
+/* Área de Texto (Descrição do Serviço) */
+.modal-text-area {
+    -fx-control-inner-background: #FFFFFF;
+    -fx-background-color: transparent;
+    -fx-border-color: #D1D5DB;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #192637;
+}
+
+.modal-text-area:focused {
+    -fx-border-color: #0052E0;
+}
+
+/* DatePicker com fundo branco */
+.modal-date-picker {
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+}
+.modal-date-picker > .text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D5DB;
+    -fx-border-radius: 6px 0 0 6px;
+    -fx-background-radius: 6px 0 0 6px;
+}
+.modal-date-picker:focused > .text-field {
+    -fx-border-color: #0052E0;
+}
+
+/* =========================================
+   Apenas os campos DESATIVADOS ficam cinzas
+   ========================================= */
+.modal-input:disabled, .modal-combo-box:disabled, .modal-date-picker:disabled > .text-field {
+    -fx-background-color: #E5E7EB;
+    -fx-border-color: transparent;
+    -fx-text-fill: #6B7280;
+    -fx-opacity: 0.9;
+}
+
+/* =========================================
+   RODAPÉ ESCURO E BOTÕES DO MODAL (ESTA PARTE FALTAVA)
+   ========================================= */
+
+/* Fundo do Rodapé */
+.modal-bottom-bar {
+    -fx-background-color: #192637;
+    -fx-pref-height: 70px;
+    -fx-min-height: 70px;
+    -fx-padding: 0 24px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 12px;
+}
+
+/* Separador Vertical */
+.modal-sep {
+    -fx-background-color: #2D3D52;
+    -fx-pref-width: 1px;
+    -fx-min-width: 1px;
+    -fx-pref-height: 34px;
+}
+
+/* Botões Neutros (Cancelar, Sair, Incluir, Alterar) - Discretos */
+.btn-modal-neutral {
+    -fx-background-color: transparent;
+    -fx-border-color: #334155;
+    -fx-border-radius: 6px;
+    -fx-text-fill: #CBD5E1;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-pref-height: 38px;
+    -fx-padding: 0 16px;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+}
+.btn-modal-neutral:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #475569;
+}
+
+/* Botão Primário (Salvar) - Foco total em azul preenchido */
+.btn-modal-primary {
+    -fx-background-color: #0052E0;
+    -fx-border-color: transparent;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-pref-height: 38px;
+    -fx-padding: 0 24px;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+}
+.btn-modal-primary:hover {
+    -fx-background-color: #0044B9;
+}
+
+/* Botão de Perigo (Excluir) - Contorno e texto vermelhos */
+.btn-modal-danger {
+    -fx-background-color: transparent;
+    -fx-border-color: #991B1B;
+    -fx-border-radius: 6px;
+    -fx-text-fill: #FCA5A5;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-pref-height: 38px;
+    -fx-padding: 0 16px;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+}
+.btn-modal-danger:hover {
+    -fx-background-color: rgba(153, 27, 27, 0.15);
+    -fx-text-fill: #FECACA;
+}
